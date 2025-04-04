@@ -30,7 +30,7 @@ export default async function Page({ searchParams }) {
       <div className="mb-8 flex justify-end">
         <Filter />
       </div>
-      <Suspense fallback={<Spinner from="Cabins" key={filter} />}>
+      <Suspense key={filter} fallback={<Spinner from="Cabins"  />}>
         <CabinList filter={filter} />
         <ReservationReminder />
       </Suspense>

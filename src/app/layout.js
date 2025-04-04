@@ -1,5 +1,6 @@
-import { Josefin_Sans } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
+import { Josefin_Sans } from 'next/font/google';
 import Header from '../components/Header';
 import '../styles/globals.css';
 import ReservationProvider from '../context/ReservationContext';
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${Josefin.className} bg-primary-950 text-primary-100 flex min-h-screen flex-col antialiased`}
       >
+        <Analytics />
         <Header />
         <div className="grid flex-1 px-4 py-6 sm:px-8 sm:py-12">
           <main className="mx-auto mt-25 w-full max-w-7xl">
